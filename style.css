@@ -1,0 +1,7 @@
+html { font-family: sans; }
+.correct { background-color: #a1e1a1; }
+.incorrect { background-color: #e1a1a1; }
+.valid { background-color: #e1e1a1; }
+.question { background-color: #def2f8; color: #2f6473; padding: 24px; margin-bottom: 16px;}
+.answer { margin-bottom: 8px; }
+input[type=submit] { background-color: #1177d1; color: white; border: 0; padding: 8px; cursor: pointer; }
