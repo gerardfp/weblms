@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="style.css">
-
 <?php
+include 'header.php';
+
 $mysqli = new mysqli("localhost", "my_lmsuser", "my_lmspassword", "my_lmsdb");
 
 $resultat = $mysqli->query("SELECT * FROM questions");

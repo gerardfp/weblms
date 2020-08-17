@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="style.css">
-
 <?php
+include 'header.php';
 
 $mysqli = new mysqli("localhost", "my_lmsuser", "my_lmspassword", "my_lmsdb");
 
@@ -43,6 +42,7 @@ while ($fila = $resultat->fetch_assoc()) {
 	echo "</div>";
 
 }
-echo "<p>Puntuació: $punts de $total</p>";
-
+echo "<h3>Puntuació: $punts / $total (". number_format($punts/$total*100, 2) ."%)</h3>";
 ?>
+
+<a href="index.php">Torna a intentar-ho</a>
