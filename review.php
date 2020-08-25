@@ -13,30 +13,35 @@ while ($fila = $resultat->fetch_assoc()) {
 
 	$id = $fila['id'];
 	$pregunta = $fila['q'];
+
 	echo "<div class='question'>";
 	echo "<p>$pregunta</p>";
 
-	for($i=1; $i<=4; $i++){
-		if($_GET[$id] == $i){
+	for ($i=1; $i<=4; $i++) {
+		
+		if ($_GET[$id] == $i) {
 			$marcada = "checked";
-                	if($_GET[$id] == $fila['correct']){
+			if ($_GET[$id] == $fila['correct']) {
 				$classe = "correct";
 				$punts++;
-                	} else {
+			} 
+			else {
 				$classe = "incorrect";
-                	}
-        	} else {
+			}
+		} 
+		else {
 			$marcada = "";
-			if($fila['correct'] == $i){
+			if ($fila['correct'] == $i) {
 				$classe = "valid";
-			}else {
+			}
+			else {
 				$classe = "";
 			}
-        	}
+		}
 		echo "<div class='answer $classe'><input type='radio' id='answer$i' $marcada disabled><label for='answer$i'>" . $fila["a$i"] . "</label></div>";
 	}
 
-	if($_GET[$id] == $fila['correct']){
+	if ($_GET[$id] == $fila['correct']) {
 		echo "<br>+1!";
 	}
 	echo "</div>";

@@ -26,7 +26,7 @@ br { margin: 24px; }
 </form>
 
 <?php
-if(isset($_GET['pregunta'])){
+if (isset($_GET['pregunta'])) {
 	$mysqli = new mysqli("localhost", "my_lmsuser", "my_lmspassword", "my_lmsdb");
 
 	$stmt = $mysqli->prepare("INSERT INTO questions (q, a1, a2, a3, a4, correct) VALUES (?,?,?,?,?,?)");
